@@ -5,7 +5,7 @@
 
 int main(int argc, char *argcv[]){
     if(argc ==1) {
-      FILE *fp = fopen("/proc/meminfo", r);
+      FILE *fp = fopen("/proc/meminfo", "r");
 
 if (fp == NULL) {
             perror("Error al abrir el archivo");
@@ -24,7 +24,7 @@ if (fp == NULL) {
         float utilization = 100.0 * (total - available) / total;
 
         printf("Porcentaje de utilización de memoria virtual: %.2f%%\n", utilization);
-    } else if (argc == 2 && strcmp(argv[1], "-r") == 0) {
+    } else if (argc == 2 && strcmp(argcv[1], "-r") == 0) {
         FILE *fp = fopen("/proc/meminfo", "r");
         if (fp == NULL) {
             perror("Error al abrir el archivo");
@@ -43,7 +43,7 @@ if (fp == NULL) {
 
         printf("Porcentaje de utilización de memoria real: %.2f%%\n", utilization);
     } else {
-        printf("Uso: %s [-r]\n", argv[0]);
+        printf("Uso: %s [-r]\n", argcv[0]);
         return 1;
     }
 
