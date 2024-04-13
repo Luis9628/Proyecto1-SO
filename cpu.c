@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
         }
 
         unsigned long long utime, stime;
-        fscanf(fp, "%*d %*s %*c %*d %*d %*d %*d %*d %*u %*lu %*lu %*lu %*lu %llu %llu", &utime, &stime);
+        fscanf(fp, "%*d %*s %*s %*d %*d %*d %*d %*d %*u %*lu %*lu %*lu %*lu %llu %llu", &utime, &stime);
         fclose(fp);
 
         unsigned long long total_time = utime + stime;

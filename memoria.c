@@ -17,7 +17,6 @@ void print_process_info(int pid) {
 
     char comm[256];
     unsigned long int rss;
-    // Ajustamos la lectura para omitir los campos que no necesitamos
     fscanf(fp, "%*d %s %*c %*d %*d %*d %*d %*d %*u %*u %*u %*u %*u %*u %*u %*d %*d %*d %*d %*d %*d %*d %lu", comm, &rss);
 
     fclose(fp);

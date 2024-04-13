@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         }
 
         unsigned long long total_size;
-        fscanf(dfp, "%*s %*lu %*lu %*lu %*lu %llu", &total_size);
+        fscanf(dfp, "%*s %*s %*s %*s %llu", &total_size);
         pclose(dfp);
 
         unsigned long long free_space;
